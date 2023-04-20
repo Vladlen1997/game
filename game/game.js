@@ -1,3 +1,5 @@
+import mainScene from "./scenes/mainScene.js"
+
 const config = {
     type: Phaser.AUTO,
     width: 800,
@@ -10,7 +12,7 @@ const config = {
             debug: true
         }
     },
-    scene: []
+    scene: [mainScene]
 }
 
 new Phaser.Game(config)
