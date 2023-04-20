@@ -3,9 +3,15 @@ export default class mainScene extends Phaser.Scene {
         super('mainScene')
     }
 
-    preload() {}
+    preload(){
+        this.load.image('sky', '../game/assets/sky.png')
+        this.load.image('ground', '../game/assets/ground.png')
+        this.load.image('platform', '../game/assets/platform.png')
+    }
 
-    create(){}
+    create(){
+        this.add.image(400, 300, 'sky')
+    }
 
     update(){}
 
