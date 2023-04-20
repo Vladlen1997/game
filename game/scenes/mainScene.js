@@ -3,12 +3,14 @@ export default class mainScene extends Phaser.Scene {
         super('mainScene')
         this.ground;
         this.platforms;
+        this.bishop;
     }
 
     preload(){
         this.load.image('sky', '../game/assets/sky.png')
         this.load.image('ground', '../game/assets/ground.png')
         this.load.image('platform', '../game/assets/platform.png')
+        this.load.spritesheet('bishop', '../game/assets/Bishop/bishop.png', {frameWidth: 32, frameHeight: 32})
     }
 
     create(){
@@ -20,6 +22,7 @@ export default class mainScene extends Phaser.Scene {
         this.platforms.create(50, 500, 'platform')
         this.platforms.create(550, 350, 'platform')
         this.platforms.create(600, 500, 'platform')
+        this.bishop = this.physics.add.sprite(0, 0, 'bishop')
     }
 
     update(){}
