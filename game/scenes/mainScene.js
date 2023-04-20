@@ -24,6 +24,7 @@ export default class mainScene extends Phaser.Scene {
         this.platforms.create(600, 500, 'platform')
         this.bishop = this.physics.add.sprite(0, 0, 'bishop')
         this.bishop.setCollideWorldBounds(true)
+        this.bishop.setBounce(0.2)
     }
 
     update(){}
